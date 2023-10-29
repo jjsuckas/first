@@ -1,0 +1,10 @@
+func countkmers(sequence string, k int) map[string]int {
+    kmerCounts := make(map[string]int)
+
+    for i := 0; i <= len(sequence)-k; i++ {
+        kmer := sequence[i : i+k]
+        kmerCounts[kmer]++
+    }
+
+    return kmerCounts
+}
